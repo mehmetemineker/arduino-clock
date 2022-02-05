@@ -115,27 +115,15 @@ void loop() {
           STATE = VIEW;
           deciSeconds = 0;
 
-          int h0 = String(sevsegChars[0]).toInt();
-          int h1 = String(sevsegChars[1]).toInt();
-          int m0 = String(sevsegChars[2]).toInt();
-          int m1 = String(sevsegChars[3]).toInt();
-
-          Serial.println(h0);
-          Serial.println(h1);
-          Serial.println(m0);
-          Serial.println(m1);
-
           if (h0 == 0) {
             Clock.setHour(h1);
           } else {
-            Serial.println(h0 * 10 + h1);
             Clock.setHour(h0 * 10 + h1);
           }
 
           if (m0 == 0) {
             Clock.setMinute(m1);
           } else {
-            Serial.println(m0 * 10 + m1);
             Clock.setMinute(m0 * 10 + m1);
           }
 
