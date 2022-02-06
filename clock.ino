@@ -114,6 +114,11 @@ void loop() {
         {
           STATE = VIEW;
           deciSeconds = 0;
+          
+          int h0 = String(sevsegChars[0]).toInt();
+          int h1 = String(sevsegChars[1]).toInt();
+          int m0 = String(sevsegChars[2]).toInt();
+          int m1 = String(sevsegChars[3]).toInt();
 
           if (h0 == 0) {
             Clock.setHour(h1);
